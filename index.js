@@ -1,35 +1,44 @@
-let nome = "Charmander";
-let tipo = "Fogo";
-let xp = 10000;
+let quantidadeDeVitorias = 148
+let quantidadeDeDerrotas= 30
 let nivel = "Radiante";
+let resultado = 148-30
 
-switch(true){
-    case(xp < 1000):
+console.log (resultado)
+
+
+// função de subtração para calcular o saldo
+
+function calcularSaldo(vitórias, derrotas){
+    return vitórias - derrotas
+}
+ switch(true){
+    case(resultado < 10):
       nivel= "Ferro";
         break;
-    case(xp >= 1001 && xp <=2000):
+    case(resultado >= 11 && resultado <=20):
     nivel= "Bronze";
         break;
-    case(xp >= 2001 && xp <= 5000):
+    case(resultado >= 21 && resultado <= 50):
     nivel= "Prata";
         break;
-    case (xp >= 5001 && xp<= 7000):
+    case (resultado >= 51 && resultado<= 70):
         nivel= "Ouro";
         break;
-    case (xp >= 7001 && xp <= 8000):
+    case (resultado >= 71 && resultado <= 80):
         nivel= "Platina";
         break;
-    case (xp >= 8001 && xp <= 9000):
+    case (resultado >= 81 && resultado <= 90):
         nivel= "Ascendente";
         break;
-    case (xp >= 9001 && xp <= 10000):
+    case (resultado >= 91 && resultado <= 100):
         nivel= "Imortal";
         break;
-    default:
-        nivel= "Radiante"; 
+    case(resultado>=101):    
+        nivel= "Radiante";
+        break; 
     }       
-        console.log("Pokemon " + nome + " é do tipo " + tipo + " e está no nivel " + nivel + " com " + xp + " pontos de experiencia"); 
-    
+        console.log("O Herói tem o saldo de " + (quantidadeDeVitorias - quantidadeDeDerrotas) + " e está no nivel " + nivel ); 
+
 
 
 
